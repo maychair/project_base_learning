@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/saturn/workspace/tasks/os/toyos-0.11/kernel/include/stddef.h
+
+/home/saturn/workspace/tasks/os/toyos-0.11/kernel/include/stdint.h
+
+/home/saturn/workspace/tasks/os/toyos-0.11/kernel/include/string.h
+stdint.h
+/home/saturn/workspace/tasks/os/toyos-0.11/kernel/include/stdint.h
+stddef.h
+/home/saturn/workspace/tasks/os/toyos-0.11/kernel/include/stddef.h
+
+/home/saturn/workspace/tasks/os/toyos-0.11/kernel/libc/string.cpp
+string.h
+/home/saturn/workspace/tasks/os/toyos-0.11/kernel/libc/string.h
+

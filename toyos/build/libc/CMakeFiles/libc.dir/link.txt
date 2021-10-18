@@ -1,0 +1,2 @@
+llvm-ar qc liblibc.a  CMakeFiles/libc.dir/string.cpp.o
+/usr/bin/ranlib liblibc.a
