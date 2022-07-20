@@ -47,86 +47,140 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/saturn/workspace/tasks/os/toyos-0.11/kernel
+CMAKE_SOURCE_DIR = /home/saturn/workspace/sourcecode/project_base_learning/toyos
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/saturn/workspace/tasks/os/toyos-0.11/build
+CMAKE_BINARY_DIR = /home/saturn/workspace/sourcecode/project_base_learning/toyos/build
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
 all: CMakeFiles/kernel.elf.dir/all
-all: arch/riscv/riscv/all
-all: libc/all
+all: Kernel/all
+all: Library/all
 
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall: arch/riscv/riscv/preinstall
-preinstall: libc/preinstall
+preinstall: Kernel/preinstall
+preinstall: Library/preinstall
 
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/kernel.elf.dir/clean
-clean: arch/riscv/riscv/clean
-clean: libc/clean
+clean: Kernel/clean
+clean: Library/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Directory level rules for directory arch/riscv/riscv
+# Directory level rules for directory Kernel
 
 # Recursive "all" directory target.
-arch/riscv/riscv/all: arch/riscv/riscv/CMakeFiles/riscv.dir/all
+Kernel/all: Kernel/Arch/all
 
-.PHONY : arch/riscv/riscv/all
+.PHONY : Kernel/all
 
 # Recursive "preinstall" directory target.
-arch/riscv/riscv/preinstall:
+Kernel/preinstall: Kernel/Arch/preinstall
 
-.PHONY : arch/riscv/riscv/preinstall
+.PHONY : Kernel/preinstall
 
 # Recursive "clean" directory target.
-arch/riscv/riscv/clean: arch/riscv/riscv/CMakeFiles/riscv.dir/clean
+Kernel/clean: Kernel/Arch/clean
 
-.PHONY : arch/riscv/riscv/clean
+.PHONY : Kernel/clean
 
 #=============================================================================
-# Directory level rules for directory libc
+# Directory level rules for directory Kernel/Arch
 
 # Recursive "all" directory target.
-libc/all: libc/CMakeFiles/libc.dir/all
+Kernel/Arch/all: Kernel/Arch/riscv/all
 
-.PHONY : libc/all
+.PHONY : Kernel/Arch/all
 
 # Recursive "preinstall" directory target.
-libc/preinstall:
+Kernel/Arch/preinstall: Kernel/Arch/riscv/preinstall
 
-.PHONY : libc/preinstall
+.PHONY : Kernel/Arch/preinstall
 
 # Recursive "clean" directory target.
-libc/clean: libc/CMakeFiles/libc.dir/clean
+Kernel/Arch/clean: Kernel/Arch/riscv/clean
 
-.PHONY : libc/clean
+.PHONY : Kernel/Arch/clean
+
+#=============================================================================
+# Directory level rules for directory Kernel/Arch/riscv
+
+# Recursive "all" directory target.
+Kernel/Arch/riscv/all: Kernel/Arch/riscv/CMakeFiles/riscv.dir/all
+
+.PHONY : Kernel/Arch/riscv/all
+
+# Recursive "preinstall" directory target.
+Kernel/Arch/riscv/preinstall:
+
+.PHONY : Kernel/Arch/riscv/preinstall
+
+# Recursive "clean" directory target.
+Kernel/Arch/riscv/clean: Kernel/Arch/riscv/CMakeFiles/riscv.dir/clean
+
+.PHONY : Kernel/Arch/riscv/clean
+
+#=============================================================================
+# Directory level rules for directory Library
+
+# Recursive "all" directory target.
+Library/all: Library/libc/all
+
+.PHONY : Library/all
+
+# Recursive "preinstall" directory target.
+Library/preinstall: Library/libc/preinstall
+
+.PHONY : Library/preinstall
+
+# Recursive "clean" directory target.
+Library/clean: Library/libc/clean
+
+.PHONY : Library/clean
+
+#=============================================================================
+# Directory level rules for directory Library/libc
+
+# Recursive "all" directory target.
+Library/libc/all: Library/libc/CMakeFiles/libc.dir/all
+
+.PHONY : Library/libc/all
+
+# Recursive "preinstall" directory target.
+Library/libc/preinstall:
+
+.PHONY : Library/libc/preinstall
+
+# Recursive "clean" directory target.
+Library/libc/clean: Library/libc/CMakeFiles/libc.dir/clean
+
+.PHONY : Library/libc/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/kernel.elf.dir
 
 # All Build rule for target.
-CMakeFiles/kernel.elf.dir/all: arch/riscv/riscv/CMakeFiles/riscv.dir/all
-CMakeFiles/kernel.elf.dir/all: libc/CMakeFiles/libc.dir/all
+CMakeFiles/kernel.elf.dir/all: Kernel/Arch/riscv/CMakeFiles/riscv.dir/all
+CMakeFiles/kernel.elf.dir/all: Library/libc/CMakeFiles/libc.dir/all
 	$(MAKE) -f CMakeFiles/kernel.elf.dir/build.make CMakeFiles/kernel.elf.dir/depend
 	$(MAKE) -f CMakeFiles/kernel.elf.dir/build.make CMakeFiles/kernel.elf.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saturn/workspace/tasks/os/toyos-0.11/build/CMakeFiles --progress-num=1,2 "Built target kernel.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saturn/workspace/sourcecode/project_base_learning/toyos/build/CMakeFiles --progress-num=1,2 "Built target kernel.elf"
 .PHONY : CMakeFiles/kernel.elf.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/kernel.elf.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saturn/workspace/tasks/os/toyos-0.11/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saturn/workspace/sourcecode/project_base_learning/toyos/build/CMakeFiles 9
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/kernel.elf.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saturn/workspace/tasks/os/toyos-0.11/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saturn/workspace/sourcecode/project_base_learning/toyos/build/CMakeFiles 0
 .PHONY : CMakeFiles/kernel.elf.dir/rule
 
 # Convenience name for target.
@@ -140,58 +194,58 @@ CMakeFiles/kernel.elf.dir/clean:
 .PHONY : CMakeFiles/kernel.elf.dir/clean
 
 #=============================================================================
-# Target rules for target arch/riscv/riscv/CMakeFiles/riscv.dir
+# Target rules for target Kernel/Arch/riscv/CMakeFiles/riscv.dir
 
 # All Build rule for target.
-arch/riscv/riscv/CMakeFiles/riscv.dir/all:
-	$(MAKE) -f arch/riscv/riscv/CMakeFiles/riscv.dir/build.make arch/riscv/riscv/CMakeFiles/riscv.dir/depend
-	$(MAKE) -f arch/riscv/riscv/CMakeFiles/riscv.dir/build.make arch/riscv/riscv/CMakeFiles/riscv.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saturn/workspace/tasks/os/toyos-0.11/build/CMakeFiles --progress-num=5,6,7,8,9 "Built target riscv"
-.PHONY : arch/riscv/riscv/CMakeFiles/riscv.dir/all
+Kernel/Arch/riscv/CMakeFiles/riscv.dir/all:
+	$(MAKE) -f Kernel/Arch/riscv/CMakeFiles/riscv.dir/build.make Kernel/Arch/riscv/CMakeFiles/riscv.dir/depend
+	$(MAKE) -f Kernel/Arch/riscv/CMakeFiles/riscv.dir/build.make Kernel/Arch/riscv/CMakeFiles/riscv.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saturn/workspace/sourcecode/project_base_learning/toyos/build/CMakeFiles --progress-num=7,8,9 "Built target riscv"
+.PHONY : Kernel/Arch/riscv/CMakeFiles/riscv.dir/all
 
 # Build rule for subdir invocation for target.
-arch/riscv/riscv/CMakeFiles/riscv.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saturn/workspace/tasks/os/toyos-0.11/build/CMakeFiles 5
-	$(MAKE) -f CMakeFiles/Makefile2 arch/riscv/riscv/CMakeFiles/riscv.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saturn/workspace/tasks/os/toyos-0.11/build/CMakeFiles 0
-.PHONY : arch/riscv/riscv/CMakeFiles/riscv.dir/rule
+Kernel/Arch/riscv/CMakeFiles/riscv.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saturn/workspace/sourcecode/project_base_learning/toyos/build/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 Kernel/Arch/riscv/CMakeFiles/riscv.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saturn/workspace/sourcecode/project_base_learning/toyos/build/CMakeFiles 0
+.PHONY : Kernel/Arch/riscv/CMakeFiles/riscv.dir/rule
 
 # Convenience name for target.
-riscv: arch/riscv/riscv/CMakeFiles/riscv.dir/rule
+riscv: Kernel/Arch/riscv/CMakeFiles/riscv.dir/rule
 
 .PHONY : riscv
 
 # clean rule for target.
-arch/riscv/riscv/CMakeFiles/riscv.dir/clean:
-	$(MAKE) -f arch/riscv/riscv/CMakeFiles/riscv.dir/build.make arch/riscv/riscv/CMakeFiles/riscv.dir/clean
-.PHONY : arch/riscv/riscv/CMakeFiles/riscv.dir/clean
+Kernel/Arch/riscv/CMakeFiles/riscv.dir/clean:
+	$(MAKE) -f Kernel/Arch/riscv/CMakeFiles/riscv.dir/build.make Kernel/Arch/riscv/CMakeFiles/riscv.dir/clean
+.PHONY : Kernel/Arch/riscv/CMakeFiles/riscv.dir/clean
 
 #=============================================================================
-# Target rules for target libc/CMakeFiles/libc.dir
+# Target rules for target Library/libc/CMakeFiles/libc.dir
 
 # All Build rule for target.
-libc/CMakeFiles/libc.dir/all:
-	$(MAKE) -f libc/CMakeFiles/libc.dir/build.make libc/CMakeFiles/libc.dir/depend
-	$(MAKE) -f libc/CMakeFiles/libc.dir/build.make libc/CMakeFiles/libc.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saturn/workspace/tasks/os/toyos-0.11/build/CMakeFiles --progress-num=3,4 "Built target libc"
-.PHONY : libc/CMakeFiles/libc.dir/all
+Library/libc/CMakeFiles/libc.dir/all:
+	$(MAKE) -f Library/libc/CMakeFiles/libc.dir/build.make Library/libc/CMakeFiles/libc.dir/depend
+	$(MAKE) -f Library/libc/CMakeFiles/libc.dir/build.make Library/libc/CMakeFiles/libc.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saturn/workspace/sourcecode/project_base_learning/toyos/build/CMakeFiles --progress-num=3,4,5,6 "Built target libc"
+.PHONY : Library/libc/CMakeFiles/libc.dir/all
 
 # Build rule for subdir invocation for target.
-libc/CMakeFiles/libc.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saturn/workspace/tasks/os/toyos-0.11/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 libc/CMakeFiles/libc.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saturn/workspace/tasks/os/toyos-0.11/build/CMakeFiles 0
-.PHONY : libc/CMakeFiles/libc.dir/rule
+Library/libc/CMakeFiles/libc.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saturn/workspace/sourcecode/project_base_learning/toyos/build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 Library/libc/CMakeFiles/libc.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saturn/workspace/sourcecode/project_base_learning/toyos/build/CMakeFiles 0
+.PHONY : Library/libc/CMakeFiles/libc.dir/rule
 
 # Convenience name for target.
-libc: libc/CMakeFiles/libc.dir/rule
+libc: Library/libc/CMakeFiles/libc.dir/rule
 
 .PHONY : libc
 
 # clean rule for target.
-libc/CMakeFiles/libc.dir/clean:
-	$(MAKE) -f libc/CMakeFiles/libc.dir/build.make libc/CMakeFiles/libc.dir/clean
-.PHONY : libc/CMakeFiles/libc.dir/clean
+Library/libc/CMakeFiles/libc.dir/clean:
+	$(MAKE) -f Library/libc/CMakeFiles/libc.dir/build.make Library/libc/CMakeFiles/libc.dir/clean
+.PHONY : Library/libc/CMakeFiles/libc.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

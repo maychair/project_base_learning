@@ -1,4 +1,4 @@
-set(CMAKE_C_COMPILER "/home/saturn/Applications/llvm-project/build/bin/clang")
+set(CMAKE_C_COMPILER "/home/saturn/workspace/Applications/llvm-project/build/bin/clang")
 set(CMAKE_C_COMPILER_ARG1 "")
 set(CMAKE_C_COMPILER_ID "Clang")
 set(CMAKE_C_COMPILER_VERSION "14.0.0")
@@ -18,9 +18,9 @@ set(CMAKE_C_SIMULATE_VERSION "")
 
 
 set(CMAKE_AR "llvm-ar")
-set(CMAKE_C_COMPILER_AR "/home/saturn/Applications/llvm-project/build/bin/llvm-ar")
+set(CMAKE_C_COMPILER_AR "/home/saturn/workspace/Applications/llvm-project/build/bin/llvm-ar")
 set(CMAKE_RANLIB "/usr/bin/ranlib")
-set(CMAKE_C_COMPILER_RANLIB "/home/saturn/Applications/llvm-project/build/bin/llvm-ranlib")
+set(CMAKE_C_COMPILER_RANLIB "/home/saturn/workspace/Applications/llvm-project/build/bin/llvm-ranlib")
 set(CMAKE_LINKER "/usr/bin/ld")
 set(CMAKE_MT "")
 set(CMAKE_COMPILER_IS_GNUCC )
@@ -70,7 +70,7 @@ endif()
 
 
 
-set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "/home/saturn/Applications/llvm-project/build/lib/clang/14.0.0/include;/usr/local/include;/usr/include/x86_64-linux-gnu;/usr/include")
+set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "/home/saturn/workspace/Applications/llvm-project/build/lib/clang/14.0.0/include;/usr/local/include;/usr/include/x86_64-linux-gnu;/usr/include")
 set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "gcc;gcc_s;c;gcc;gcc_s")
-set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "/usr/lib/gcc/x86_64-linux-gnu/9;/usr/lib64;/lib/x86_64-linux-gnu;/lib64;/usr/lib/x86_64-linux-gnu;/home/saturn/Applications/llvm-project/build/lib;/lib;/usr/lib")
+set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "/usr/lib/gcc/x86_64-linux-gnu/9;/usr/lib64;/lib/x86_64-linux-gnu;/lib64;/usr/lib/x86_64-linux-gnu;/home/saturn/workspace/Applications/llvm-project/build/lib;/lib;/usr/lib")
 set(CMAKE_C_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")

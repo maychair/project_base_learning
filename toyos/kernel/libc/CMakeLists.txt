@@ -1,5 +1,0 @@
-aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR} libc)
-include_directories(${CMAKE_SOURCE_DIR}/include)
-set(CMAKE_CXX_FLAGS "-target riscv64 -fPIE -fno-common -O0 -pipe -g -nostdinc -D_KERNEL -march=rv64imafdc -mabi=lp64 -mcmodel=medium -mno-relax -ffreestanding -fwrapv -fstack-protector -Wall -Wredundant-decls -Wnested-externs -Wstrict-prototypes -Wmissing-prototypes -Wpointer-arith -Wcast-qual -Wundef -Wno-pointer-sign -D__printf__=__freebsd_kprintf__ -Wmissing-include-dirs -fdiagnostics-show-option -Wno-unknown-pragmas -Wno-error-tautological-compare -Wno-error-empty-body -Wno-error-parentheses-equality -Wno-error-unused-function -Wno-error-pointer-sign -Wno-error-shift-negative-value -Wno-address-of-packed-member -Wno-format-zero-length  -std=c++17 -nostdlib -fno-exceptions -fno-rtti -fno-threadsafe-statics -Wno-incompatible-pointer-types -fno-sized-deallocation -ffunction-sections -fno-stack-protector")
-
-add_library(libc STATIC ${libc})

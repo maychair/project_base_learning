@@ -1,0 +1,2 @@
+llvm-ar qc libriscv.a  CMakeFiles/riscv.dir/KernelMain.cpp.o CMakeFiles/riscv.dir/sbi.cpp.o
+/usr/bin/ranlib libriscv.a

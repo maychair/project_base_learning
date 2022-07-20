@@ -4,18 +4,19 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_ASM
-  "/home/saturn/workspace/tasks/os/toyos-0.11/kernel/arch/riscv/boot/boot.S" "/home/saturn/workspace/tasks/os/toyos-0.11/build/CMakeFiles/kernel.elf.dir/arch/riscv/boot/boot.S.o"
+  "/home/saturn/workspace/sourcecode/project_base_learning/toyos/Kernel/Arch/riscv/boot.S" "/home/saturn/workspace/sourcecode/project_base_learning/toyos/build/CMakeFiles/kernel.elf.dir/Kernel/Arch/riscv/boot.S.o"
   )
 set(CMAKE_ASM_COMPILER_ID "Clang")
 
 # The include file search paths:
 set(CMAKE_ASM_TARGET_INCLUDE_PATH
+  "../"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/saturn/workspace/tasks/os/toyos-0.11/build/arch/riscv/riscv/CMakeFiles/riscv.dir/DependInfo.cmake"
-  "/home/saturn/workspace/tasks/os/toyos-0.11/build/libc/CMakeFiles/libc.dir/DependInfo.cmake"
+  "/home/saturn/workspace/sourcecode/project_base_learning/toyos/build/Kernel/Arch/riscv/CMakeFiles/riscv.dir/DependInfo.cmake"
+  "/home/saturn/workspace/sourcecode/project_base_learning/toyos/build/Library/libc/CMakeFiles/libc.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

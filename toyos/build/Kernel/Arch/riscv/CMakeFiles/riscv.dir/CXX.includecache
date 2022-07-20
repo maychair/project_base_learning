@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../Library/libc/printk.h
+
+../Library/libc/stdint.h
+
+/home/saturn/workspace/sourcecode/project_base_learning/toyos/Kernel/Arch/riscv/KernelMain.cpp
+Library/libc/printk.h
+-
+
+/home/saturn/workspace/sourcecode/project_base_learning/toyos/Kernel/Arch/riscv/riscvreg.h
+
+/home/saturn/workspace/sourcecode/project_base_learning/toyos/Kernel/Arch/riscv/sbi.cpp
+sbi.h
+/home/saturn/workspace/sourcecode/project_base_learning/toyos/Kernel/Arch/riscv/sbi.h
+riscvreg.h
+/home/saturn/workspace/sourcecode/project_base_learning/toyos/Kernel/Arch/riscv/riscvreg.h
+
+/home/saturn/workspace/sourcecode/project_base_learning/toyos/Kernel/Arch/riscv/sbi.h
+Library/libc/stdint.h
+-
+

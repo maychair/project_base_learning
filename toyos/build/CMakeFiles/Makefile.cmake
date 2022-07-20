@@ -7,13 +7,16 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
+  "../CMakeLists.txt"
+  "../Kernel/Arch/CMakeLists.txt"
+  "../Kernel/Arch/riscv/CMakeLists.txt"
+  "../Kernel/CMakeLists.txt"
+  "../Library/CMakeLists.txt"
+  "../Library/libc/CMakeLists.txt"
   "CMakeFiles/3.16.3/CMakeASMCompiler.cmake"
   "CMakeFiles/3.16.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.16.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.16.3/CMakeSystem.cmake"
-  "/home/saturn/workspace/tasks/os/toyos-0.11/kernel/CMakeLists.txt"
-  "/home/saturn/workspace/tasks/os/toyos-0.11/kernel/arch/riscv/riscv/CMakeLists.txt"
-  "/home/saturn/workspace/tasks/os/toyos-0.11/kernel/libc/CMakeLists.txt"
   "/usr/share/cmake-3.16/Modules/CMakeASMInformation.cmake"
   "/usr/share/cmake-3.16/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-3.16/Modules/CMakeCXXInformation.cmake"
@@ -49,13 +52,16 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
-  "arch/riscv/riscv/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "libc/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "Kernel/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "Kernel/Arch/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "Kernel/Arch/riscv/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "Library/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "Library/libc/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/kernel.elf.dir/DependInfo.cmake"
-  "arch/riscv/riscv/CMakeFiles/riscv.dir/DependInfo.cmake"
-  "libc/CMakeFiles/libc.dir/DependInfo.cmake"
+  "Kernel/Arch/riscv/CMakeFiles/riscv.dir/DependInfo.cmake"
+  "Library/libc/CMakeFiles/libc.dir/DependInfo.cmake"
   )

@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/kernel.elf.dir/arch/riscv/boot/boot.S.o"
+  "CMakeFiles/kernel.elf.dir/Kernel/Arch/riscv/boot.S.o"
   "kernel.elf"
   "kernel.elf.pdb"
 )

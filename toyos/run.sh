@@ -1,5 +1,5 @@
 qemu-system-riscv64 \
-    -machine virt \
+    -machine virt -m 8G -smp 2 \
     -nographic \
-    -bios $OPENSBI/fw_jump.bin \
+    -bios /home/saturn/workspace/test/qihai-boot/virtio-qihai-boot/opensbi/build/platform/generic/firmware/fw_jump.elf \
     -kernel ./build/kernel.elf

@@ -51,10 +51,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/saturn/workspace/tasks/os/toyos-0.11/kernel
+CMAKE_SOURCE_DIR = /home/saturn/workspace/sourcecode/project_base_learning/toyos
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/saturn/workspace/tasks/os/toyos-0.11/build
+CMAKE_BINARY_DIR = /home/saturn/workspace/sourcecode/project_base_learning/toyos/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -83,9 +83,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saturn/workspace/tasks/os/toyos-0.11/build/CMakeFiles /home/saturn/workspace/tasks/os/toyos-0.11/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saturn/workspace/sourcecode/project_base_learning/toyos/build/CMakeFiles /home/saturn/workspace/sourcecode/project_base_learning/toyos/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saturn/workspace/tasks/os/toyos-0.11/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saturn/workspace/sourcecode/project_base_learning/toyos/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -136,7 +136,7 @@ riscv: cmake_check_build_system
 
 # fast build rule for target.
 riscv/fast:
-	$(MAKE) -f arch/riscv/riscv/CMakeFiles/riscv.dir/build.make arch/riscv/riscv/CMakeFiles/riscv.dir/build
+	$(MAKE) -f Kernel/Arch/riscv/CMakeFiles/riscv.dir/build.make Kernel/Arch/riscv/CMakeFiles/riscv.dir/build
 .PHONY : riscv/fast
 
 #=============================================================================
@@ -149,17 +149,17 @@ libc: cmake_check_build_system
 
 # fast build rule for target.
 libc/fast:
-	$(MAKE) -f libc/CMakeFiles/libc.dir/build.make libc/CMakeFiles/libc.dir/build
+	$(MAKE) -f Library/libc/CMakeFiles/libc.dir/build.make Library/libc/CMakeFiles/libc.dir/build
 .PHONY : libc/fast
 
-arch/riscv/boot/boot.o: arch/riscv/boot/boot.S.o
+Kernel/Arch/riscv/boot.o: Kernel/Arch/riscv/boot.S.o
 
-.PHONY : arch/riscv/boot/boot.o
+.PHONY : Kernel/Arch/riscv/boot.o
 
 # target to build an object file
-arch/riscv/boot/boot.S.o:
-	$(MAKE) -f CMakeFiles/kernel.elf.dir/build.make CMakeFiles/kernel.elf.dir/arch/riscv/boot/boot.S.o
-.PHONY : arch/riscv/boot/boot.S.o
+Kernel/Arch/riscv/boot.S.o:
+	$(MAKE) -f CMakeFiles/kernel.elf.dir/build.make CMakeFiles/kernel.elf.dir/Kernel/Arch/riscv/boot.S.o
+.PHONY : Kernel/Arch/riscv/boot.S.o
 
 # Help Target
 help:
@@ -172,7 +172,7 @@ help:
 	@echo "... kernel.elf"
 	@echo "... riscv"
 	@echo "... libc"
-	@echo "... arch/riscv/boot/boot.o"
+	@echo "... Kernel/Arch/riscv/boot.o"
 .PHONY : help
 
 

@@ -1,0 +1,2 @@
+llvm-ar qc liblibc.a  CMakeFiles/libc.dir/printk.cpp.o CMakeFiles/libc.dir/string.cpp.o CMakeFiles/libc.dir/vsprintf.cpp.o
+/usr/bin/ranlib liblibc.a

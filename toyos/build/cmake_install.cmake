@@ -1,4 +1,4 @@
-# Install script for directory: /home/saturn/workspace/tasks/os/toyos-0.11/kernel
+# Install script for directory: /home/saturn/workspace/sourcecode/project_base_learning/toyos
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,8 +39,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/saturn/workspace/tasks/os/toyos-0.11/build/arch/riscv/riscv/cmake_install.cmake")
-  include("/home/saturn/workspace/tasks/os/toyos-0.11/build/libc/cmake_install.cmake")
+  include("/home/saturn/workspace/sourcecode/project_base_learning/toyos/build/Kernel/cmake_install.cmake")
+  include("/home/saturn/workspace/sourcecode/project_base_learning/toyos/build/Library/cmake_install.cmake")
 
 endif()
 
@@ -52,5 +52,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/saturn/workspace/tasks/os/toyos-0.11/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/saturn/workspace/sourcecode/project_base_learning/toyos/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
